@@ -1,1 +1,1 @@
-worker: python bot_diplom.py $PORT
+web: python bot_diplom.py
