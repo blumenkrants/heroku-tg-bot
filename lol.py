@@ -1,0 +1,1 @@
+lol = "print lol.py"
