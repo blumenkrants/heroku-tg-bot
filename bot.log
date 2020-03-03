@@ -104,3 +104,10 @@ Traceback (most recent call last):
     raise BadRequest(message)
 telegram.error.BadRequest: Object expected as reply markup
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
