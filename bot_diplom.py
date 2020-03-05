@@ -13,8 +13,8 @@ import telegramcalendar
 
 
 
-# PROXY = {'proxy_url': 'socks5://t1.learn.python.ru:1080',
-#          'urllib3_proxy_kwargs': {'username': 'learn', 'password': 'python'}}
+PROXY = {'proxy_url': 'socks5://t1.learn.python.ru:1080',
+         'urllib3_proxy_kwargs': {'username': 'learn', 'password': 'python'}}
 
 TOKEN = "728852231:AAEZLnITK0BYNpAfQ4DCIC8CjpyiYLYUpIo"
 
