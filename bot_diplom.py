@@ -11,6 +11,9 @@ import mysql.connector
 # from diplom import telegramcalendar
 import telegramcalendar
 
+import os
+import psycopg2
+
 
 
 PROXY = {'proxy_url': 'socks5://t1.learn.python.ru:1080',
@@ -26,10 +29,31 @@ logger = logging.getLogger(__name__)
 
 FIRST, SECOND, THIRD, FOURTH, FIVE = range(5)
 
-conn = mysql.connector.connect(host='mysql.j949396.myjino.ru',
-                               database='j949396_blondi-service',
-                               user='j949396',
-                               password='qwerty')
+# conn = mysql.connector.connect(host='mysql.j949396.myjino.ru',
+#                                database='j949396_blondi-service',
+#                                user='j949396',
+#                                password='qwerty')
+
+DATABASE_URL = os.environ['postgres://sepdreekypiqhd:ac8d1d611f3d504f7c312d5b62c0e8d0319925773b62f747da1a3320ee0b3ee4@ec2-54-246-89-234.eu-west-1.compute.amazonaws.com:5432/d1d4qe3vqt296e']
+conn = psycopg2.connect(DATABASE_URL,
+                        sslmode='require')
+
+
+# Команды для переезда на Постгре
+# pgloader mysql://j949396:qwerty@mysql.j949396.myjino.ru/j949396_blondi-service postgresql:///blondie
+# psql -h localhost -d blondie
+# pg_dump -Fc --no-acl --no-owner -h localhost -U dmitriy blondie > blondie.dump
+#
+# Access Key ID:  AKIAJNBTFI6UPPQ32LLQ
+# Secret Access Key: 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
+#
+# heroku config:set S3_blondiebucket=blondie-assets -a blondie
+#
+# aws s3 presign s3://blondiebucket/blondie.dump
+#
+# heroku pg:backups:restore 'https://blondiebucket.s3.us-east-2.amazonaws.com/blondie.dump' DATABASE_URL -a blondie
+
+
 cursor = conn.cursor()
 
 smiles = [emojize(':heavy_plus_sign:', use_aliases=True),

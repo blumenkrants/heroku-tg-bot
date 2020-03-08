@@ -111,3 +111,10 @@ root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be trac
 root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
