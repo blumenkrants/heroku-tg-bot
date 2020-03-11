@@ -14,15 +14,15 @@ conn = psycopg2.connect(host='ec2-54-246-89-234.eu-west-1.compute.amazonaws.com'
 
 cursor = conn.cursor()
 
-sql = "SELECT * FROM barbershop_room"
+sql = "SELECT * FROM record_info"
 cursor.execute(sql)
 data_base = cursor.fetchall()
-print(data_base)
+conn.close()
 
+for data in data_base:
+    print(data)
 
-# SELECT * FROM INFORMATION_SCHEMA.TABLES
-#
-# \dt *.*
-#
-# как сменить используемую схему в постгре
-
+'''
+restart DYNO:
+heroku ps:restart
+'''

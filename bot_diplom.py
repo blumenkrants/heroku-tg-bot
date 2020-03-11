@@ -7,11 +7,10 @@ from datetime import timedelta, datetime
 from telegram.ext import messagequeue as mq
 
 import logging
-import mysql.connector
-# from diplom import telegramcalendar
+
 import telegramcalendar
 
-import os
+import mysql.connector
 import psycopg2
 
 
@@ -29,29 +28,33 @@ logger = logging.getLogger(__name__)
 
 FIRST, SECOND, THIRD, FOURTH, FIVE = range(5)
 
-# conn = mysql.connector.connect(host='mysql.j949396.myjino.ru',
-#                                database='j949396_blondi-service',
-#                                user='j949396',
-#                                password='qwerty')
+'''Коннект к БД Джино
+conn = mysql.connector.connect(host='mysql.j949396.myjino.ru',
+                               database='j949396_blondi-service',
+                               user='j949396',
+                               password='qwerty')
+'''
 
 conn = psycopg2.connect(host='ec2-54-246-89-234.eu-west-1.compute.amazonaws.com',
                         database='d1d4qe3vqt296e',
                         user='sepdreekypiqhd',
                         password='ac8d1d611f3d504f7c312d5b62c0e8d0319925773b62f747da1a3320ee0b3ee4')
 
-# Команды для переезда на Постгре
-# pgloader mysql://j949396:qwerty@mysql.j949396.myjino.ru/j949396_blondi-service postgresql:///blondie
-# psql -h localhost -d blondie
-# pg_dump -Fc --no-acl --no-owner -h localhost -U dmitriy blondie > blondie.dump
-#
-# Access Key ID:  AKIAJNBTFI6UPPQ32LLQ
-# Secret Access Key: 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
-#
-# heroku config:set S3_blondiebucket=blondie-assets -a blondie
-#
-# aws s3 presign s3://blondiebucket/blondie.dump
-#
-# heroku pg:backups:restore 'https://blondiebucket.s3.us-east-2.amazonaws.com/blondie.dump' DATABASE_URL -a blondie
+'''Команды для переезда на Постгре
+pgloader mysql://j949396:qwerty@mysql.j949396.myjino.ru/j949396_blondi-service postgresql:///blondie
+psql -h localhost -d blondie
+pg_dump -Fc --no-acl --no-owner -h localhost -U dmitriy blondie > blondie.dump
+
+Access Key ID:  AKIAJNBTFI6UPPQ32LLQ
+Secret Access Key: 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
+
+heroku config:set S3_blondiebucket=blondie-assets -a blondie
+
+aws s3 presign s3://blondiebucket/blondie.dump
+
+heroku pg:backups:restore 'https://blondiebucket.s3.us-east-2.amazonaws.com/blondie.dump' DATABASE_URL -a blondie
+
+SHOW search_path;'''
 
 
 cursor = conn.cursor()
@@ -78,7 +81,6 @@ start_keyboard = ReplyKeyboardMarkup([['Добавить запись {}'.format
                                      one_time_keyboard=True)
 menu_keyboard = ReplyKeyboardMarkup([['Вернуться в главное меню {}'.format(smiles[10])]],
                                     resize_keyboard=True)
-lol = "print lol.py"
 
 
 def talk_to_me(bot, update):
@@ -122,6 +124,8 @@ def choose_service(bot, update, user_data):
     sql_2 = "SELECT service, price FROM manicure_room"
     cursor.execute(sql_2)
     data_base_2 = cursor.fetchall()
+
+    conn.close()
 
     global all_services
     all_price = [price[1] for price in data_base]
@@ -172,6 +176,8 @@ def choose_master(bot, update, user_data):
     sql_2 = "SELECT * FROM manicure_masters"
     cursor.execute(sql_2)
     data_base_2 = cursor.fetchall()
+
+    conn.close()
 
     all_info = [i for i in data_base]
     all_info_2 = [i for i in data_base_2]
@@ -318,6 +324,8 @@ def time_check(bot, update, user_data):
     cursor.execute(sql_2)
     data_base_2 = cursor.fetchall()
 
+    conn.close()
+
     if selected:
         all_time = [i[0] for i in data_base if user_data.get('name') in i[1]]
         for z in data_base_2:
@@ -403,12 +411,15 @@ def get_contact(bot, update, user_data, job_queue):
                     " VALUES (%s,%s,%s,%s,%s,%s)"
     cursor.execute(record_insert, record)
     conn.commit()
+    conn.close()
 
     """ Создание напоминаний """
 
     sql = "SELECT * FROM record_info"
     cursor.execute(sql)
     data_base = cursor.fetchall()
+
+    conn.close()
 
     """ Словарь для ограничения количества записей """
     global max_entries
@@ -482,6 +493,8 @@ def my_entry(bot, update, user_data):
     cursor.execute(sql_2)
     data_base_2 = cursor.fetchall()
 
+    conn.close()
+
     if user_data == {}:
         update.message.reply_text('У вас нет записей {}'.format(smiles[9]),
                                   reply_markup=start_keyboard)
@@ -552,6 +565,8 @@ def cancel_entries(bot, update, user_data, job_queue):
     cursor.execute(sql)
     data_base = cursor.fetchall()
 
+    conn.close()
+
     info_list = []
     for data_list in data_base:
         if user_data.get('number') in data_list[4]:
@@ -564,6 +579,7 @@ def cancel_entries(bot, update, user_data, job_queue):
                        " service = %s and name = %s and date = %s and time = %s and number = %s",
                        new_tuple)
         conn.commit()
+        conn.close()
 
         user_data.clear()
         max_entries.clear()
@@ -582,6 +598,7 @@ def cancel_entries(bot, update, user_data, job_queue):
                        " service = %s and name = %s and date = %s and time = %s and number = %s",
                        new_tuple)
         conn.commit()
+        conn.close()
 
         max_entries.pop()
 
@@ -605,6 +622,7 @@ def cancel_entries(bot, update, user_data, job_queue):
                        " service = %s and name = %s and date = %s and time = %s and number = %s",
                        new_tuple)
         conn.commit()
+        conn.close()
 
         max_entries.pop()
 
@@ -627,6 +645,7 @@ def cancel_entries(bot, update, user_data, job_queue):
                        " service = %s and name = %s and date = %s and time = %s and number = %s",
                        new_tuple)
         conn.commit()
+        conn.close()
 
         max_entries.pop()
 
@@ -644,6 +663,8 @@ def cancel_entries(bot, update, user_data, job_queue):
         max_entries.clear()
 
         conn.commit()
+        conn.close()
+
         job_queue.stop()
         bot.delete_message(chat_id=update.callback_query.from_user.id,
                            message_id=query.message.message_id)
