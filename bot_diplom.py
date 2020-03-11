@@ -125,8 +125,6 @@ def choose_service(bot, update, user_data):
     cursor.execute(sql_2)
     data_base_2 = cursor.fetchall()
 
-    conn.close()
-
     global all_services
     all_price = [price[1] for price in data_base]
     all_services = [service[0] for service in data_base]
@@ -160,6 +158,8 @@ def choose_service(bot, update, user_data):
 
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text(info_text_2, reply_markup=reply_markup)
+    cursor.close()
+    conn.close()
     return FIRST
 
 
@@ -176,8 +176,6 @@ def choose_master(bot, update, user_data):
     sql_2 = "SELECT * FROM manicure_masters"
     cursor.execute(sql_2)
     data_base_2 = cursor.fetchall()
-
-    conn.close()
 
     all_info = [i for i in data_base]
     all_info_2 = [i for i in data_base_2]
@@ -250,6 +248,8 @@ def choose_master(bot, update, user_data):
                        reply_markup=reply_markup)
     bot.delete_message(chat_id=query.from_user.id,
                        message_id=query.message.message_id)
+    cursor.close()
+    conn.close()
     return SECOND
 
 
@@ -324,8 +324,6 @@ def time_check(bot, update, user_data):
     cursor.execute(sql_2)
     data_base_2 = cursor.fetchall()
 
-    conn.close()
-
     if selected:
         all_time = [i[0] for i in data_base if user_data.get('name') in i[1]]
         for z in data_base_2:
@@ -348,6 +346,8 @@ def time_check(bot, update, user_data):
                               reply_markup=reply_markup)
     user_data['date'] = date.strftime("%Y-%m-%d")
     print(user_data)
+    cursor.close()
+    conn.close()
     return FOURTH
 
 
@@ -411,15 +411,12 @@ def get_contact(bot, update, user_data, job_queue):
                     " VALUES (%s,%s,%s,%s,%s,%s)"
     cursor.execute(record_insert, record)
     conn.commit()
-    conn.close()
 
     """ Создание напоминаний """
 
     sql = "SELECT * FROM record_info"
     cursor.execute(sql)
     data_base = cursor.fetchall()
-
-    conn.close()
 
     """ Словарь для ограничения количества записей """
     global max_entries
@@ -460,6 +457,8 @@ def get_contact(bot, update, user_data, job_queue):
     update.message.reply_text("Спасибо! \n"
                               "Вы можете посмотреть информацию о своих записях в главном меню",
                               reply_markup=start_keyboard)
+    cursor.close()
+    conn.close()
 
 
 @mq.queuedmessage
@@ -493,7 +492,6 @@ def my_entry(bot, update, user_data):
     cursor.execute(sql_2)
     data_base_2 = cursor.fetchall()
 
-    conn.close()
 
     if user_data == {}:
         update.message.reply_text('У вас нет записей {}'.format(smiles[9]),
@@ -552,6 +550,8 @@ def my_entry(bot, update, user_data):
                                   chat_id=update.callback_query.message.chat_id,
                                   message_id=update.callback_query.message.message_id,
                                   reply_markup=reply_markup)
+        cursor.close()
+        conn.close()
         return FIVE
 
 
@@ -565,8 +565,6 @@ def cancel_entries(bot, update, user_data, job_queue):
     cursor.execute(sql)
     data_base = cursor.fetchall()
 
-    conn.close()
-
     info_list = []
     for data_list in data_base:
         if user_data.get('number') in data_list[4]:
@@ -579,7 +577,6 @@ def cancel_entries(bot, update, user_data, job_queue):
                        " service = %s and name = %s and date = %s and time = %s and number = %s",
                        new_tuple)
         conn.commit()
-        conn.close()
 
         user_data.clear()
         max_entries.clear()
@@ -598,7 +595,6 @@ def cancel_entries(bot, update, user_data, job_queue):
                        " service = %s and name = %s and date = %s and time = %s and number = %s",
                        new_tuple)
         conn.commit()
-        conn.close()
 
         max_entries.pop()
 
@@ -622,7 +618,6 @@ def cancel_entries(bot, update, user_data, job_queue):
                        " service = %s and name = %s and date = %s and time = %s and number = %s",
                        new_tuple)
         conn.commit()
-        conn.close()
 
         max_entries.pop()
 
@@ -645,7 +640,6 @@ def cancel_entries(bot, update, user_data, job_queue):
                        " service = %s and name = %s and date = %s and time = %s and number = %s",
                        new_tuple)
         conn.commit()
-        conn.close()
 
         max_entries.pop()
 
@@ -663,7 +657,6 @@ def cancel_entries(bot, update, user_data, job_queue):
         max_entries.clear()
 
         conn.commit()
-        conn.close()
 
         job_queue.stop()
         bot.delete_message(chat_id=update.callback_query.from_user.id,
@@ -677,7 +670,8 @@ def cancel_entries(bot, update, user_data, job_queue):
         bot.send_message(chat_id=update.callback_query.from_user.id,
                          text='Вы вернулись в главное меню',
                          reply_markup=start_keyboard)
-
+    cursor.close()
+    conn.close()
 
 def info(bot, update):
     update.message.reply_text("Наши контакты: \n "
@@ -687,7 +681,6 @@ def info(bot, update):
                               "Будни: с 10:00 до 22:00 \n "
                               "Выходные: c 10:00 до 22:00",
                               reply_markup=menu_keyboard)
-
 
 def main():
     mybot = Updater("728852231:AAEZLnITK0BYNpAfQ4DCIC8CjpyiYLYUpIo", request_kwargs=PROXY)
