@@ -12,6 +12,7 @@ import telegramcalendar
 
 import mysql.connector
 import psycopg2
+import signal
 
 
 
@@ -670,6 +671,11 @@ def info(bot, update):
                               "Выходные: c 10:00 до 22:00",
                               reply_markup=menu_keyboard)
 
+def sigterm_handler(signal, frame):
+    cursor.close()
+    conn.close()
+
+
 def main():
     mybot = Updater("728852231:AAEZLnITK0BYNpAfQ4DCIC8CjpyiYLYUpIo", request_kwargs=PROXY)
 
@@ -703,3 +709,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    signal.signal(signal.SIGTERM, sigterm_handler)
