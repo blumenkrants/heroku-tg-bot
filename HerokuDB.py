@@ -25,4 +25,5 @@ for data in data_base:
 '''
 restart DYNO:
 heroku ps:restart
+heroku pg:diagnose
 '''

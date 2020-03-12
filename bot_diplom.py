@@ -158,8 +158,6 @@ def choose_service(bot, update, user_data):
 
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text(info_text_2, reply_markup=reply_markup)
-    cursor.close()
-    conn.close()
     return FIRST
 
 
@@ -248,8 +246,6 @@ def choose_master(bot, update, user_data):
                        reply_markup=reply_markup)
     bot.delete_message(chat_id=query.from_user.id,
                        message_id=query.message.message_id)
-    cursor.close()
-    conn.close()
     return SECOND
 
 
@@ -346,8 +342,6 @@ def time_check(bot, update, user_data):
                               reply_markup=reply_markup)
     user_data['date'] = date.strftime("%Y-%m-%d")
     print(user_data)
-    cursor.close()
-    conn.close()
     return FOURTH
 
 
@@ -457,8 +451,6 @@ def get_contact(bot, update, user_data, job_queue):
     update.message.reply_text("Спасибо! \n"
                               "Вы можете посмотреть информацию о своих записях в главном меню",
                               reply_markup=start_keyboard)
-    cursor.close()
-    conn.close()
 
 
 @mq.queuedmessage
@@ -550,8 +542,6 @@ def my_entry(bot, update, user_data):
                                   chat_id=update.callback_query.message.chat_id,
                                   message_id=update.callback_query.message.message_id,
                                   reply_markup=reply_markup)
-        cursor.close()
-        conn.close()
         return FIVE
 
 
@@ -670,8 +660,6 @@ def cancel_entries(bot, update, user_data, job_queue):
         bot.send_message(chat_id=update.callback_query.from_user.id,
                          text='Вы вернулись в главное меню',
                          reply_markup=start_keyboard)
-    cursor.close()
-    conn.close()
 
 def info(bot, update):
     update.message.reply_text("Наши контакты: \n "
