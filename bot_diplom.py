@@ -12,7 +12,7 @@ import telegramcalendar
 
 import mysql.connector
 import psycopg2
-import signal
+import signal, sys
 
 
 
@@ -674,6 +674,7 @@ def info(bot, update):
 def handle_exit(signal, frame):
     cursor.close()
     conn.close()
+    sys.exit(0)
 
 
 def main():
