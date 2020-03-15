@@ -672,6 +672,7 @@ def info(bot, update):
                               reply_markup=menu_keyboard)
 
 def handle_exit(signal, frame):
+    print('Получен сигнал остановки работы бота')
     cursor.close()
     conn.close()
     sys.exit(0)
