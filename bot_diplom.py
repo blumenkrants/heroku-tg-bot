@@ -30,18 +30,18 @@ logger = logging.getLogger(__name__)
 FIRST, SECOND, THIRD, FOURTH, FIVE = range(5)
 
 # Коннект к БД Джино
-# conn = mysql.connector.connect(host='mysql.j949396.myjino.ru',
-#                                database='j949396_blondi-service',
-#                                user='j949396',
-#                                password='qwerty')
+conn = mysql.connector.connect(host='mysql.j949396.myjino.ru',
+                               database='j949396_blondi-service',
+                               user='j949396',
+                               password='qwerty')
 
 # print('My PID is:', os.getpid())
 
 # Подключение к БД Хероку
-conn = psycopg2.connect(host='ec2-54-246-89-234.eu-west-1.compute.amazonaws.com',
-                        database='d1d4qe3vqt296e',
-                        user='sepdreekypiqhd',
-                        password='ac8d1d611f3d504f7c312d5b62c0e8d0319925773b62f747da1a3320ee0b3ee4')
+# conn = psycopg2.connect(host='ec2-54-246-89-234.eu-west-1.compute.amazonaws.com',
+#                         database='d1d4qe3vqt296e',
+#                         user='sepdreekypiqhd',
+#                         password='ac8d1d611f3d504f7c312d5b62c0e8d0319925773b62f747da1a3320ee0b3ee4')
 
 '''Команды для переезда на Постгре
 pgloader mysql://j949396:qwerty@mysql.j949396.myjino.ru/j949396_blondi-service postgresql:///blondie
@@ -643,8 +643,9 @@ def cancel_entries(bot, update, user_data, job_queue):
                          text='Есть!',
                          reply_markup=my_entry(bot, update, user_data))
     elif service == 'Отмена':
-        info_tuple = tuple(user_data.get('number'),)
-        cursor.execute("DELETE FROM record_info WHERE number = %s" % info_tuple)
+        # info_tuple = ((user_data.get('number'),)
+        # print(info_tuple)
+        cursor.execute("DELETE FROM record_info WHERE number = %s" % ((user_data.get('number'),)))
 
         user_data.clear()
         max_entries.clear()

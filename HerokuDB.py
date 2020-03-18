@@ -15,17 +15,19 @@ conn = psycopg2.connect(host='ec2-54-246-89-234.eu-west-1.compute.amazonaws.com'
 cursor = conn.cursor()
 
 sql = "SELECT * FROM record_info"
-# 'TRUNCATE TABLE record_info'
+# 'TRUNCATE TABLE record_info;'
 cursor.execute(sql)
 data_base = cursor.fetchall()
-conn.close()
 
 for data in data_base:
     print(data)
 
+conn.close()
 '''
 restart DYNO:
 heroku ps:restart -a blondie
 heroku pg:diagnose
+heroku pg:psql postgresql-rugged-74908 --app blondie
+
 '''
 
