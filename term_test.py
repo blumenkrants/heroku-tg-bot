@@ -4,12 +4,11 @@ import sys
 
 print('My PID is:', os.getpid())
 
-def handle_exit(signal, frame):
-    print('lol')
-    sys.exit(0)
+def terminateProcess(signal, frame):
+    print('обработчик сигнала')
+    sys.exit()
 
 def main():
-    signal.signal(signal.SIGTERM, handle_exit)
     try:
         print ("Hello")
         i = 0
@@ -23,6 +22,7 @@ def main():
 
 
 if __name__ == '__main__':
+    signal.signal(signal.SIGTERM, terminateProcess)
     main()
 
 

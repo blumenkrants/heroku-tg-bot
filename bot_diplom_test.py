@@ -12,8 +12,7 @@ import telegramcalendar
 
 import mysql.connector
 import psycopg2
-import sys, os
-from signal import signal, SIGINT, SIGTERM, SIGABRT
+import signal, sys, os
 
 
 PROXY = {'proxy_url': 'socks5://t1.learn.python.ru:1080',
@@ -30,18 +29,18 @@ logger = logging.getLogger(__name__)
 FIRST, SECOND, THIRD, FOURTH, FIVE = range(5)
 
 # Коннект к БД Джино
-# conn = mysql.connector.connect(host='mysql.j949396.myjino.ru',
-#                                database='j949396_blondi-service',
-#                                user='j949396',
-#                                password='qwerty')
+conn = mysql.connector.connect(host='mysql.j949396.myjino.ru',
+                               database='j949396_blondi-service',
+                               user='j949396',
+                               password='qwerty')
 
-# print('My PID is:', os.getpid())
+print('My PID is:', os.getpid())
 
-Подключение к БД Хероку
-conn = psycopg2.connect(host='ec2-54-246-89-234.eu-west-1.compute.amazonaws.com',
-                        database='d1d4qe3vqt296e',
-                        user='sepdreekypiqhd',
-                        password='ac8d1d611f3d504f7c312d5b62c0e8d0319925773b62f747da1a3320ee0b3ee4')
+# Подключение к БД Хероку
+# conn = psycopg2.connect(host='ec2-54-246-89-234.eu-west-1.compute.amazonaws.com',
+#                         database='d1d4qe3vqt296e',
+#                         user='sepdreekypiqhd',
+#                         password='ac8d1d611f3d504f7c312d5b62c0e8d0319925773b62f747da1a3320ee0b3ee4')
 
 '''Команды для переезда на Постгре
 pgloader mysql://j949396:qwerty@mysql.j949396.myjino.ru/j949396_blondi-service postgresql:///blondie
@@ -673,17 +672,17 @@ def info(bot, update):
                               "Выходные: c 10:00 до 22:00",
                               reply_markup=menu_keyboard)
 
-
-def terminateProcess(signum, frame):
-    print ('(SIGTERM) завершил процесс')
+def handle_exit(signal, frame):
+    print('Получен сигнал остановки работы бота')
+    cursor.close()
     conn.close()
-    mybot.stop()
-    os._exit(1)
+    sys.exit(0)
 
 
 def main():
-    global mybot
-    mybot = Updater("728852231:AAEZLnITK0BYNpAfQ4DCIC8CjpyiYLYUpIo", request_kwargs=PROXY, user_sig_handler=terminateProcess)
+    signal.signal(signal.SIGTERM, handle_exit)
+
+    mybot = Updater("728852231:AAEZLnITK0BYNpAfQ4DCIC8CjpyiYLYUpIo", request_kwargs=PROXY)
 
     dp = mybot.dispatcher
     mybot.bot._msg_queue = mq.MessageQueue()
@@ -710,7 +709,7 @@ def main():
     dp.add_handler(RegexHandler("О нас", info))
     dp.add_handler(MessageHandler(Filters.text, talk_to_me))
     mybot.start_polling()
-    mybot.idle(stop_signals=(SIGINT, SIGTERM, SIGABRT))
+    mybot.idle()
 
 
 if __name__ == '__main__':

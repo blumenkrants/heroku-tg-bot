@@ -118,3 +118,518 @@ root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be trac
 root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 319, in _network_loop_retry
+    if not action_cb():
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 280, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 1975, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 233, in _request_wrapper
+    raise NetworkError('{0} ({1})'.format(message, resp.status))
+telegram.error.NetworkError: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 319, in _network_loop_retry
+    if not action_cb():
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 280, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 1975, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 233, in _request_wrapper
+    raise NetworkError('{0} ({1})'.format(message, resp.status))
+telegram.error.NetworkError: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 319, in _network_loop_retry
+    if not action_cb():
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 280, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 1975, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 233, in _request_wrapper
+    raise NetworkError('{0} ({1})'.format(message, resp.status))
+telegram.error.NetworkError: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 319, in _network_loop_retry
+    if not action_cb():
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 280, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 1975, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 233, in _request_wrapper
+    raise NetworkError('{0} ({1})'.format(message, resp.status))
+telegram.error.NetworkError: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 319, in _network_loop_retry
+    if not action_cb():
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 280, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 1975, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 233, in _request_wrapper
+    raise NetworkError('{0} ({1})'.format(message, resp.status))
+telegram.error.NetworkError: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 319, in _network_loop_retry
+    if not action_cb():
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 280, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 1975, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 233, in _request_wrapper
+    raise NetworkError('{0} ({1})'.format(message, resp.status))
+telegram.error.NetworkError: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 319, in _network_loop_retry
+    if not action_cb():
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 280, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 1975, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 233, in _request_wrapper
+    raise NetworkError('{0} ({1})'.format(message, resp.status))
+telegram.error.NetworkError: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 319, in _network_loop_retry
+    if not action_cb():
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/updater.py", line 280, in polling_action_cb
+    allowed_updates=allowed_updates)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 1975, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 233, in _request_wrapper
+    raise NetworkError('{0} ({1})'.format(message, resp.status))
+telegram.error.NetworkError: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.dispatcher - WARNING - A TelegramError was raised while processing the Update
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom.py", line 287, in calendar
+    reply_markup=choose_master(bot, update, user_data))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Object expected as reply markup
+telegram.ext.dispatcher - WARNING - A TelegramError was raised while processing the Update
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom.py", line 627, in cancel_entries
+    reply_markup=my_entry(bot, update, user_data))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Object expected as reply markup
+telegram.ext.dispatcher - WARNING - A TelegramError was raised while processing the Update
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom.py", line 627, in cancel_entries
+    reply_markup=my_entry(bot, update, user_data))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Object expected as reply markup
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.dispatcher - WARNING - A TelegramError was raised while processing the Update
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom.py", line 288, in calendar
+    reply_markup=choose_master(bot, update, user_data))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Object expected as reply markup
+telegram.ext.dispatcher - WARNING - A TelegramError was raised while processing the Update
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom.py", line 292, in calendar
+    reply_markup=choose_master(bot, update, user_data))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Object expected as reply markup
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom_test.py", line 196, in choose_master
+    cursor.execute(sql)
+NameError: name 'cursor' is not defined
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom_test.py", line 198, in choose_master
+    db2.execute(sql)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/mysql/connector/cursor.py", line 519, in execute
+    raise errors.ProgrammingError("Cursor is not connected")
+mysql.connector.errors.ProgrammingError: Cursor is not connected
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom_test.py", line 198, in choose_master
+    db2.execute(sql)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/mysql/connector/cursor.py", line 519, in execute
+    raise errors.ProgrammingError("Cursor is not connected")
+mysql.connector.errors.ProgrammingError: Cursor is not connected
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/regexhandler.py", line 173, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom_test.py", line 146, in choose_service
+    db1.execute(sql)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/mysql/connector/cursor.py", line 519, in execute
+    raise errors.ProgrammingError("Cursor is not connected")
+mysql.connector.errors.ProgrammingError: Cursor is not connected
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom_test.py", line 198, in choose_master
+    db1.execute(sql)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/mysql/connector/cursor.py", line 519, in execute
+    raise errors.ProgrammingError("Cursor is not connected")
+mysql.connector.errors.ProgrammingError: Cursor is not connected
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom_test.py", line 312, in calendar
+    reply_markup=choose_master(bot, update, user_data))
+  File "bot_diplom_test.py", line 197, in choose_master
+    db1.execute(sql)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/mysql/connector/cursor.py", line 519, in execute
+    raise errors.ProgrammingError("Cursor is not connected")
+mysql.connector.errors.ProgrammingError: Cursor is not connected
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom_test.py", line 316, in calendar
+    reply_markup=choose_master(bot, update, user_data))
+  File "bot_diplom_test.py", line 197, in choose_master
+    db1.execute(sql)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/mysql/connector/cursor.py", line 519, in execute
+    raise errors.ProgrammingError("Cursor is not connected")
+mysql.connector.errors.ProgrammingError: Cursor is not connected
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom_test.py", line 196, in choose_master
+    db1.execute(sql)
+NameError: name 'db1' is not defined
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.dispatcher - WARNING - A TelegramError was raised while processing the Update
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/conversationhandler.py", line 305, in handle_update
+    new_state = self.current_handler.handle_update(update, dispatcher)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "bot_diplom.py", line 288, in calendar
+    reply_markup=choose_master(bot, update, user_data))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 65, in decorator
+    result = func(self, *args, **kwargs)
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/bot.py", line 90, in decorator
+    result = self._request.post(url, data, timeout=kwargs.get('timeout'))
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 309, in post
+    headers={'Content-Type': 'application/json'})
+  File "/Users/dmitriy/projects/diplom/env/lib/python3.6/site-packages/telegram/utils/request.py", line 223, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Object expected as reply markup
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+telegram.ext.updater - WARNING - Exiting immediately!
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+root - WARNING - If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message.
+telegram.ext.updater - INFO - Received signal 15 (SIGTERM), stopping...
