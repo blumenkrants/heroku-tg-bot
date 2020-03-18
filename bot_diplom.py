@@ -37,7 +37,7 @@ FIRST, SECOND, THIRD, FOURTH, FIVE = range(5)
 
 # print('My PID is:', os.getpid())
 
-Подключение к БД Хероку
+# Подключение к БД Хероку
 conn = psycopg2.connect(host='ec2-54-246-89-234.eu-west-1.compute.amazonaws.com',
                         database='d1d4qe3vqt296e',
                         user='sepdreekypiqhd',
