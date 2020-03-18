@@ -643,13 +643,14 @@ def cancel_entries(bot, update, user_data, job_queue):
                          text='Есть!',
                          reply_markup=my_entry(bot, update, user_data))
     elif service == 'Отмена':
-        info_tuple = user_data.get('number')
+        info_tuple = tuple(user_data.get('number'),)
         cursor.execute("DELETE FROM record_info WHERE number = %s" % info_tuple)
 
         user_data.clear()
         max_entries.clear()
 
         conn.commit()
+        print('функция отмены всех записей')
 
         job_queue.stop()
         bot.delete_message(chat_id=update.callback_query.from_user.id,
